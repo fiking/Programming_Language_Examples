@@ -10,15 +10,12 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      padding: const EdgeInsets.all(20.0),
-      children: const [
-        Text('I\'m dedicating every day to you'),
-        Text('Domestic life was never quite my style'),
-        Text('When you smile, you knock me out, I fall apart'),
-        Text('And I thought I was so smart'),
-      ],
+    return ListView.builder(
+      itemCount: 300,
+      itemExtent: 50.0,
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(title: Text('$index'),);
+      }
     );
   }
 }
