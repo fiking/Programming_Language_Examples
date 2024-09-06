@@ -10,9 +10,15 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(  
-      padding: EdgeInsets.all(20.0), //容器内补白
-      color: Colors.orange,
-      child: Text("Hello world!"),);
+    return ListView(
+      shrinkWrap: true,
+      padding: const EdgeInsets.all(20.0),
+      children: const [
+        Text('I\'m dedicating every day to you'),
+        Text('Domestic life was never quite my style'),
+        Text('When you smile, you knock me out, I fall apart'),
+        Text('And I thought I was so smart'),
+      ],
+    );
   }
 }
