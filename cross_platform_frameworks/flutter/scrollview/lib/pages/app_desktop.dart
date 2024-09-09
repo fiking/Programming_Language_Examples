@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollview/pages/goods_page.dart';
 import 'package:scrollview/pages/home_page.dart';
 
 class AppDesktop extends StatefulWidget {
@@ -16,8 +17,9 @@ class AppDesktopState extends State<AppDesktop> {
         title: const Text("App Desktop"),
       ),
       body: PageView(
-        children: const [
-          HomePage()
+        children: [
+          const HomePage(),
+          GoodsPage(),
         ],
       ),
     );
