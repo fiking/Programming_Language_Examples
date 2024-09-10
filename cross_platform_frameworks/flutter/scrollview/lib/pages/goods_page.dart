@@ -21,7 +21,7 @@ class GoodsPageState extends State<GoodsPage> {
   }
 
   void retrieveIcons() {
-    Future.delayed(const Duration(milliseconds: 200)).then((e){
+   // Future.delayed(const Duration(milliseconds: 200)).then((e){
       setState(() {
         icons.addAll([
           Icons.ac_unit,
@@ -32,7 +32,7 @@ class GoodsPageState extends State<GoodsPage> {
           Icons.free_breakfast,
         ]);
       });
-    });
+   // });
   }
 
   @override
@@ -50,7 +50,7 @@ class GoodsPageState extends State<GoodsPage> {
         if (index == icons.length - 1 && icons.length < 200) {
           retrieveIcons();
         }
-        return GoodsItemWidget(icons[index]);
+        return GoodsItemWidget(icons[index], index);
         //Icon(icons[index]);
       },
     );
