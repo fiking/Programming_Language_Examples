@@ -17,8 +17,8 @@ class AppDesktopState extends State<AppDesktop> {
         title: const Text("App Desktop"),
       ),
       body: PageView(
-        children: [
-          const HomePage(),
+        children: const [
+          HomePage(),
           GoodsPage(),
         ],
       ),
