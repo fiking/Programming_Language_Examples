@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scrollview/pages/goods_page.dart';
 import 'package:scrollview/pages/home_page.dart';
+import 'package:scrollview/pages/lottie_page.dart';
 
 class AppDesktop extends StatefulWidget {
   const AppDesktop({super.key});
@@ -20,6 +21,7 @@ class AppDesktopState extends State<AppDesktop> {
         children: const [
           HomePage(),
           GoodsPage(),
+          LottiePage(),
         ],
       ),
     );

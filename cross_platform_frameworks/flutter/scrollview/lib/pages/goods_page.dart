@@ -4,7 +4,6 @@ import 'package:scrollview/widgets/goods_item_widget.dart';
 class GoodsPage extends StatefulWidget {
   const GoodsPage({super.key});
 
-
   @override
   State<GoodsPage> createState() => GoodsPageState();
 }
