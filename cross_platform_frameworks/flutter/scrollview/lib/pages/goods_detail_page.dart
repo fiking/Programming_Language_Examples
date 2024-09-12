@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scrollview/widgets/goods_item_widget.dart';
 
 class GoodsDetailPage extends StatefulWidget {
   const GoodsDetailPage({super.key});
@@ -12,6 +13,9 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
   final List<String> comments = [
     '好看',
     '很好用',
+    '多少钱',
+    '有21寸的轮胎嘛',
+    '纹路很好',
   ];
 
   void submitComment(String text) {
@@ -19,6 +23,31 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
       comments.add(text);
       textEditingController.clear();
     });
+  }
+
+    List<IconData> icons = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    // 初始化数据
+    retrieveIcons();
+  }
+
+  void retrieveIcons() {
+   // Future.delayed(const Duration(milliseconds: 200)).then((e){
+      setState(() {
+        icons.addAll([
+          Icons.ac_unit,
+          Icons.airport_shuttle,
+          Icons.all_inclusive,
+          Icons.beach_access,
+          Icons.cake,
+          Icons.free_breakfast,
+        ]);
+      });
+   // });
   }
 
   @override
@@ -189,6 +218,24 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
                               controller: textEditingController,
                               decoration: const InputDecoration(
                                 hintText: '请输入评论',
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all( 
+                                    Radius.circular(5)
+                                  ),
+                                  borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 16, 6, 6),
+                                    width: 2,
+                                  )
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.all( 
+                                    Radius.circular(5)
+                                  ),
+                                  borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 16, 6, 6),
+                                    width: 2,
+                                  )
+                                ),
                               ),
                               onSubmitted: (String text) {
                                 submitComment(text);
@@ -198,11 +245,11 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 8, top: 10, right: 8, bottom: 0),
+                                left: 8, top: 10, right: 8, bottom: 10),
                             child: Text(
                               comments[index],
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 16,
                               ),
                             ),
                           )
@@ -211,11 +258,11 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
                     } else {
                       return Padding(
                         padding: const EdgeInsets.only(
-                            left: 8, top: 10, right: 8, bottom: 0),
+                            left: 8, top: 10, right: 8, bottom: 10),
                         child: Text(
                           comments[index],
                           style: const TextStyle(
-                            fontSize: 12,
+                            fontSize: 16,
                           ),
                         ),
                       );
@@ -223,6 +270,22 @@ class GoodsDetailPageState extends State<GoodsDetailPage> {
                   },
                   childCount: comments.length,
                 ),
+              ),
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (BuildContext context, int index) {
+                    if (index == icons.length - 1 && icons.length < 200) {
+                      retrieveIcons();
+                    }
+                    return Padding(
+                      padding: const EdgeInsets.only(
+                            left: 8, top: 10, right: 8, bottom: 10),
+                      child: Image.network(
+                              'https://photo.16pic.com/00/13/89/16pic_1389821_b.jpg')
+                    );
+                  },
+                  childCount: icons.length,
+                )
               ),
             ],
           ),
