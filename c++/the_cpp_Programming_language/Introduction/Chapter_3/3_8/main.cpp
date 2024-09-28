@@ -7,6 +7,7 @@
 #include <iterator>
 #include <fstream>
 #include <map>
+#include <valarray>
 
 using namespace std;
 
@@ -153,6 +154,27 @@ void fpointer(list<Shape*> &sh) {
 void gpointer(list<Shape*> &sh) {
     for_each(sh.begin(), sh.end(), mem_fun(&Shape::draw));
 }
+
+// 3.9
+template <class scalar> class complex {
+public:
+    complex(scalar re, scalar im) {}
+};
+
+void fcomplex(std::complex<float> f1, std::complex<double> db) {
+//    std::complex<long double> ld = f1 +  std::sqrt(db);
+//    db += fl * 3;
+//    fl = std::pow(1/fl, 2);
+}
+
+void fvactor(std::valarray<double> &a1, std::valarray<double> &a2) {
+    std::valarray<double> a = a1 * 3.14 + a2/a1;
+    a2 += a1 * 3.14;
+    a = abs(a);
+    double d = a2[7];
+}
+
+
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
