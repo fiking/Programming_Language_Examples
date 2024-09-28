@@ -7,6 +7,7 @@
 #include <iterator>
 #include <fstream>
 #include <map>
+#include <valarray>
 
 using namespace std;
 
@@ -120,8 +121,60 @@ int main_383_4() {
     istream_iterator<string> ii;
     istream_iterator<string> eos;
     for_each(ii, eos, record);
-    for_each(ii, eos, eos);
+    for_each(histogram.begin(), histogram.end(), print);
+    return 0;
 }
+
+bool gt_42(const pair<const string, int> &r) {
+    return r.second > 42;
+}
+
+void f(map<string, int> &m) {
+    typedef map<string, int>::const_iterator MI;
+    MI i = find_if(m.begin(), m.end(), gt_42);
+}
+
+void g(const map<string, int> &m) {
+    int c42 = count_if(m.begin(), m.end(), gt_42);
+}
+
+class Shape {
+public:
+    void draw() {}
+};
+
+void draw(Shape *p) {
+    p->draw();
+}
+
+void fpointer(list<Shape*> &sh) {
+    for_each(sh.begin(), sh.end(), draw);
+}
+
+void gpointer(list<Shape*> &sh) {
+    for_each(sh.begin(), sh.end(), mem_fun(&Shape::draw));
+}
+
+// 3.9
+template <class scalar> class complex {
+public:
+    complex(scalar re, scalar im) {}
+};
+
+void fcomplex(std::complex<float> f1, std::complex<double> db) {
+//    std::complex<long double> ld = f1 +  std::sqrt(db);
+//    db += fl * 3;
+//    fl = std::pow(1/fl, 2);
+}
+
+void fvactor(std::valarray<double> &a1, std::valarray<double> &a2) {
+    std::valarray<double> a = a1 * 3.14 + a2/a1;
+    a2 += a1 * 3.14;
+    a = abs(a);
+    double d = a2[7];
+}
+
+
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
