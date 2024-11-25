@@ -11,6 +11,7 @@
 		51B8DC0D2CF4649E00A2CDF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8DC0C2CF4649E00A2CDF8 /* ContentView.swift */; };
 		51B8DC0F2CF4649F00A2CDF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8DC0E2CF4649F00A2CDF8 /* Assets.xcassets */; };
 		51B8DC122CF4649F00A2CDF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8DC112CF4649F00A2CDF8 /* Preview Assets.xcassets */; };
+		51B8DC192CF493C600A2CDF8 /* RunJavascriptcore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8DC182CF493C600A2CDF8 /* RunJavascriptcore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		51B8DC0C2CF4649E00A2CDF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		51B8DC0E2CF4649F00A2CDF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51B8DC112CF4649F00A2CDF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51B8DC182CF493C600A2CDF8 /* RunJavascriptcore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunJavascriptcore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				51B8DC0A2CF4649E00A2CDF8 /* hello_javascriptcoreApp.swift */,
 				51B8DC0C2CF4649E00A2CDF8 /* ContentView.swift */,
+				51B8DC182CF493C600A2CDF8 /* RunJavascriptcore.swift */,
 				51B8DC0E2CF4649F00A2CDF8 /* Assets.xcassets */,
 				51B8DC102CF4649F00A2CDF8 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				51B8DC0D2CF4649E00A2CDF8 /* ContentView.swift in Sources */,
 				51B8DC0B2CF4649E00A2CDF8 /* hello_javascriptcoreApp.swift in Sources */,
+				51B8DC192CF493C600A2CDF8 /* RunJavascriptcore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
