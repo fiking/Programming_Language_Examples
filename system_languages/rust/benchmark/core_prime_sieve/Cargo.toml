@@ -1,0 +1,9 @@
+[package]
+name = "core_prime_sieve"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.28.0", features = ["sync","macros","io-util","rt","time"] }
+anyhow = "1.0"
+futures = "0.3.17"
