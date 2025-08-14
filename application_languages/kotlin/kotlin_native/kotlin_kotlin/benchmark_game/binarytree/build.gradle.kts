@@ -8,10 +8,10 @@ repositories {
 }
 
 kotlin {
-    androidNativeArm64("native") { // on android ndk
+//    androidNativeArm64("native") { // on android ndk
     // linuxX64("native") // on Linux
     // mingwX64("native") // on Windows
-    // macosArm64("native") { // on macOS
+    macosArm64("native") { // on macOS
         binaries {
             executable {
                 compilerOptions {
@@ -24,7 +24,7 @@ kotlin {
     sourceSets {
         val nativeMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-androidnativearm64:1.9.0-RC")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC")
             }
         }
     }
