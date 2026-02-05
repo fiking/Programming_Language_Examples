@@ -1,11 +1,7 @@
 // build.gradle.kts
 plugins {
-    kotlin("multiplatform") version "2.0.20"
-    kotlin("plugin.serialization") version "2.0.20"
-}
-
-repositories {
-    mavenCentral()
+    kotlin("multiplatform") version "2.0.20-ea-2034"
+    kotlin("plugin.serialization") version "2.0.20-ea-2034"
 }
 
 kotlin {
@@ -26,8 +22,8 @@ kotlin {
     sourceSets {
         val nativeMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1") }
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1-ohos.11")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3-ohos.3") }
         }
     }
 }
