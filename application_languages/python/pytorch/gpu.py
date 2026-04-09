@@ -16,3 +16,6 @@ def try_gpu(i = 0):
 
 def try_all_gpus():
   devices = [torch.device(f'cuda:{i}') ]
+
+
+print(torch.device('mps'))
